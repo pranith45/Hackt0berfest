@@ -1,3 +1,3 @@
 # Hackt0berfest
 
-#### Add your projects folder in here.
+#### Add your project folder in here.
