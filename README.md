@@ -7,3 +7,5 @@ Don't worry here is the repo for your first PR. Add your Competitive Coding Solu
 Or any Projects, ALL are welcome!! </p>
 
 <img src="https://k6.io/blog/static/5c95d08f4981b18d51b96ddac32b63cd/36bdc/hacktoberfest-logo.png" />
+
+<img src="https://www.home-assistant.io/images/blog/2016-10-hacktoberfest/hacktoberfest.png" />
