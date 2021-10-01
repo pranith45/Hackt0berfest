@@ -18,6 +18,8 @@ Or any Projects, ALL are welcome!! </p>
 <!-- <img src="https://i0.wp.com/blog.bitergia.com/wp-content/uploads/2020/10/Screenshot_2020-09-30-GrimoireLab-Software-Development-and-Community-Analytics-platform3.png?fit=1348%2C749&ssl=1" /> -->
 
 # How to contribute?
+  
+Information is taken from <a href="https://github.com/firstcontributions/first-contributions" >firstcontributions</a> repository.
 
 This project aims to simplify and guide the way beginners make their first contribution. If you are looking to make your first contribution, follow the steps below.
 
