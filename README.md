@@ -9,7 +9,7 @@ Or any Projects, ALL are welcome!! </p>
 #### Guidelines for Contribution
 
 <li> Add your projects in project folder
-<li> Add your CP soln in CP folder
+<li> Add your CP solution in CP folder
 
 #### Happy Coding!!!
 
