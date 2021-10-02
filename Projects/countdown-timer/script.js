@@ -3,7 +3,7 @@ const hoursEl = document.getElementById("hours");
 const minsEl = document.getElementById("mins");
 const secondsEl = document.getElementById("seconds");
 
-const neetDate = "12 Sept 2022";
+const neetDate = "12 Sept 2021";
 
 let examOver = false;
 
