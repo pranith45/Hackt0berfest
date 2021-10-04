@@ -10,6 +10,10 @@ Or any Projects, ALL are welcome!! </p>
 
 <li> Add your projects in project folder
 <li> Add your CP solution in CP folder
+ 
+#### Caution!
+ 
+This repository is only for begineers, if you have been contributing in open source or you are not a begineer then stay away from this, otherwise your PR will be marked as 'SPAM'.
 
 #### Happy Coding!!!
 
