@@ -101,4 +101,3 @@ class Window(QMainWindow):
 app=QApplication(sys.argv)
 window=Window()
 sys.exit(app.exec())        
-
