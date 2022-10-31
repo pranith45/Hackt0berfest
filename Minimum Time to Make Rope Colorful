@@ -1,0 +1,35 @@
+Alice has n balloons arranged on a rope. You are given a 0-indexed string colors where colors[i] is the color of the ith balloon.
+Alice wants the rope to be colorful. She does not want two consecutive balloons to be of the same color, so she asks Bob for help. Bob can remove some balloons from the rope to make it colorful. You are given a 0-indexed integer array neededTime where neededTime[i] is the time (in seconds) that Bob needs to remove the ith balloon from the rope.
+Return the minimum time Bob needs to make the rope colorful.
+
+Code:
+
+int rec(int i,int p,vector<int>& v,string& s,vector<vector<int>>&dp){
+        if(i>v.size()-1){return 0;}
+        // cout<<"yrs1"<<endl;
+        if(dp[i][p]!=-1){return dp[i][p];}
+        // cout<<"yrs2"<<endl;
+        int pi=0,np=0;
+        if(p==0){
+            pi=v[i]+rec(i+1,(s[i]-'a')+1,v,s,dp);
+            np=rec(i+1,p,v,s,dp);
+        }
+        else if(s[i]-'a'+1!=p){
+            pi=v[i]+rec(i+1,(s[i]-'a')+1,v,s,dp);
+            np=rec(i+1,p,v,s,dp);
+        }
+        else{
+            np=rec(i+1,p,v,s,dp);
+        }
+        return dp[i][p]=max(pi,np);
+    }
+    int minCost(string colors, vector<int>& neededTime) {
+        int sum=0;
+        for(auto x:neededTime){
+            sum+=x;
+        }
+        vector<vector<int>>dp(neededTime.size(),vector<int>(27,-1));
+        // cout<<"yrs"<<endl;
+        sum-=rec(0,0,neededTime,colors,dp);
+        return sum;
+    }
