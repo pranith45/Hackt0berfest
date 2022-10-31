@@ -1,0 +1,27 @@
+You want to schedule a list of jobs in d days. Jobs are dependent (i.e To work on the ith job, you have to finish all the jobs j where 0 <= j < i).
+
+You have to finish at least one task every day. The difficulty of a job schedule is the sum of difficulties of each day of the d days. The difficulty of a day is the maximum difficulty of a job done on that day.
+
+You are given an integer array jobDifficulty and an integer d. The difficulty of the ith job is jobDifficulty[i].
+
+Return the minimum difficulty of a job schedule. If you cannot find a schedule for the jobs return -1.
+
+Code :
+int rec(int i,int d,int m,vector<int>& v,vector<vector<vector<int>>>&dp){
+        if(d<=0){
+            if(i<=v.size()-1){
+                return 1e9;
+            }
+            else{
+                return 0;
+            }
+        }
+        if(i>v.size()-1&&d>0){return 1e9;}
+        if(dp[i][d][m]!=-1){return dp[i][d][m];}
+        return dp[i][d][m]=min(rec(i+1,d,max(m,v[i]),v,dp),max(m,v[i])+rec(i+1,d-1,0,v,dp));
+    }
+    int minDifficulty(vector<int>& jobDifficulty, int d) {
+        if(d>jobDifficulty.size()){return -1;}
+        vector<vector<vector<int>>>dp(301,vector<vector<int>>(11,vector<int>(1001,-1)));
+        return rec(0,d,0,jobDifficulty,dp);
+    }
